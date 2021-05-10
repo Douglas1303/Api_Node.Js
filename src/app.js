@@ -10,6 +10,9 @@ const router = express.Router();
 //Conecta ao banco
 mongoose.connect('mongodb+srv://ApiNode:244005@apinode.lv4wl.mongodb.net/test', { useNewUrlParser:true, useUnifiedTopology: true}); 
 
+//Carregar os Models
+const Product = require('./models/product'); 
+
 //Carregar as rotas
 const indexRoute = require('./routes/index-route'); 
 const productRoute = require('./routes/product-route'); 
