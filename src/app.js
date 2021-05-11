@@ -3,12 +3,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose'); 
+const config = require('./config'); 
 
 const app = express();
 const router = express.Router();
 
 //Conecta ao banco
-mongoose.connect('mongodb+srv://ApiNode:244005@apinode.lv4wl.mongodb.net/test', { useNewUrlParser:true, useUnifiedTopology: true}); 
+mongoose.connect(config.connectionString, { useNewUrlParser:true, useUnifiedTopology: true}); 
 
 //Carregar os Models
 const Product = require('./models/product'); 
