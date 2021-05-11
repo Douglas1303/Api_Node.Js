@@ -13,15 +13,18 @@ mongoose.connect('mongodb+srv://ApiNode:244005@apinode.lv4wl.mongodb.net/test', 
 //Carregar os Models
 const Product = require('./models/product'); 
 const Costumer = require('./models/customer'); 
+const Order = require('./models/order'); 
 
 //Carregar as rotas
 const indexRoute = require('./routes/index-route'); 
 const productRoute = require('./routes/product-route'); 
+const customerRoute = require('./routes/customer-route'); 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', indexRoute);
 app.use('/products', productRoute); 
+app.use('/customers', customerRoute); 
 
 module.exports = app;
