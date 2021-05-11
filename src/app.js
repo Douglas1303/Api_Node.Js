@@ -12,6 +12,7 @@ mongoose.connect('mongodb+srv://ApiNode:244005@apinode.lv4wl.mongodb.net/test', 
 
 //Carregar os Models
 const Product = require('./models/product'); 
+const Costumer = require('./models/customer'); 
 
 //Carregar as rotas
 const indexRoute = require('./routes/index-route'); 
