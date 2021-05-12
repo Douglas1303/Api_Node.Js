@@ -3,6 +3,6 @@ global.EMAIL_TMPL = 'Olá, <strong>{0}</strong>, seja bem vindo à Node Store!';
 
 module.exports = {
     connectionString: 'mongodb+srv://ApiNode:244005@apinode.lv4wl.mongodb.net/test',
-    sendgridKey: 'TBD',
+    sendgridKey: 'CHAVE SEND GRID',
     containerConnectionString: 'TBD'
 }
